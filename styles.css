@@ -98,3 +98,133 @@ body {
     margin-top: -70px;
     color: orangered;
 }
+
+#srchButton {
+    margin: 20px;
+    margin-top: 1em;
+    min-height: 10px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	overflow: if(false, unset, hidden);
+	
+	text-decoration: none;
+	
+	font-family: sans-serif;
+	font-weight: 800;
+	font-size: 1em;
+	
+	padding: 5px 2em;
+	
+	color: green;
+	
+	border: 0.15em solid green;
+	border-radius: calc(0.75em + 0.5em + 0.15em);
+	
+	transition: 2s;
+	
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		top: -1.5em;
+		
+		z-index: -1;
+		
+		/* width: 200%; */
+		aspect-ratio: 1;
+		
+		border: if(false, inherit, none);
+		border-radius: 40%;
+		
+		background-color: rgba(green, 0.25);
+		
+		transition: 2s;
+	}
+	
+	/* &:before {
+		left: -80%;
+		transform: translate3d(0, 5em, 0) rotate(-340deg);
+	}
+	
+	&:after {
+		right: -80%;
+		transform: translate3d(0, 5em, 0) rotate(390deg); 
+	} */
+	
+	&:hover,
+	&:focus {
+		color: white;
+		
+		&:before,
+		&:after {
+			transform: none;
+			background-color: rgba(green, 0.75);
+		}
+	}
+}
+
+#clrButton {
+    margin: 20px;
+    margin-top: 1em;
+    min-height: 10px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	overflow: if(false, unset, hidden);
+	
+	text-decoration: none;
+	
+	font-family: sans-serif;
+	font-weight: 800;
+	font-size: 1em;
+	
+	padding: 5px 2em;
+	
+	color: red;
+	
+	border: 0.15em solid red;
+	border-radius: calc(0.75em + 0.5em + 0.15em);
+	
+	transition: 2s;
+	
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		top: -1.5em;
+		
+		z-index: -1;
+		
+		/* width: 200%; */
+		aspect-ratio: 1;
+		
+		border: if(false, inherit, none);
+		border-radius: 40%;
+		
+		background-color: rgba(red, 0.25);
+		
+		transition: 2s;
+	}
+	
+	/* &:before {
+		left: -80%;
+		transform: translate3d(0, 5em, 0) rotate(-340deg);
+	}
+	
+	&:after {
+		right: -80%;
+		transform: translate3d(0, 5em, 0) rotate(390deg); 
+	} */
+	
+	&:hover,
+	&:focus {
+		color: white;
+		
+		&:before,
+		&:after {
+			transform: none;
+			background-color: rgba(red, 0.75);
+		}
+	}
+}
